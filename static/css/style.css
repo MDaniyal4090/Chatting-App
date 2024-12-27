@@ -1,0 +1,69 @@
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9333EA;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7E22CE;
+}
+
+/* Message animations */
+.message {
+    animation: fadeIn 0.3s ease-in-out;
+    padding: 8px;
+    margin: 4px 0;
+    transition: background-color 0.2s;
+}
+
+.message .timestamp {
+    font-size: 0.75rem;
+    color: #9CA3AF;
+    margin-left: 8px;
+}
+
+.message.current-user {
+    background-color: #F3E8FF;
+    border-radius: 0.5rem;
+}
+
+.message.current-user .message-content {
+    color: #6B21A8;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Active room button */
+.room-btn.active {
+    background-color: #F3E8FF;
+    color: #9333EA;
+}
+
+/* Responsive sidebar */
+@media (max-width: 768px) {
+    .sidebar-hidden {
+        transform: translateX(-100%);
+    }
+}
+
+/* Message hover effects */
+.message:hover {
+    background-color: #f8fafc;
+    border-radius: 0.5rem;
+}
